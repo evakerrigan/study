@@ -1,6 +1,8 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import './Borch.css'
+import '../../image/21.gif'
+import johnsonImg from "../../image/110.gif"
 
 
 function Food({name, picture}) {
@@ -23,7 +25,7 @@ function Food({name, picture}) {
 const foodILike = [
   {
     'name': 'упячка1',
-    'image': '/image/21.gif'
+    'image': '../../image/21.gif'
   },
   {
     'name': 'упячка2',
@@ -47,7 +49,7 @@ export const Borch = () => {
         {foodILike.map(elem => <Food name={elem.name} picture={elem.image} />)}
 
       <h2 className='test2'>Тест отображения картинок из файла HTML КАРТИНКОЙ img</h2>
-        <img src='url(./image/21.gif)' alt='' style={{
+        <img src='url(../../image/21.gif)' alt='' style={{
         width:'50px',
         height:'50px',
         'margin': '0 auto',
@@ -57,6 +59,9 @@ export const Borch = () => {
 
       <h2 className='test2'>И еще тест картинки из файла стилей CSS</h2>
         <div className='test'></div>
+
+      <h2 className='test2'>Тест картинки если ее импортировать</h2>
+        <img src={johnsonImg} />
 
     </div>
 
