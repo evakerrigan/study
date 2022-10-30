@@ -1,6 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import styles from './Borch.module.css'
+import './Borch.css'
+
 
 function Food({name, picture}) {
   return (
@@ -12,7 +13,7 @@ function Food({name, picture}) {
       height:'50px',
       'margin': '0 auto',
       border:'1px solid #900',
-      backgroundImage:'url(../../image/21.gif)'
+      backgroundImage:'url(../image/21.gif)'
       }}
       ></div>
   </div>
@@ -22,11 +23,11 @@ function Food({name, picture}) {
 const foodILike = [
   {
     'name': 'упячка1',
-    'image': './image/21.gif'
+    'image': '/image/21.gif'
   },
   {
     'name': 'упячка2',
-    'image': '../../image/41.gif'
+    'image': 'image/41.gif'
   },
   {
     'name': 'упячка3',
@@ -41,15 +42,21 @@ const foodILike = [
 export const Borch = () => {
   return (
     <div>
-      <Food name='бОРЩ' />
-      {foodILike.map(elem => <Food name={elem.name} picture={elem.image} />)}
-      <img src='./image/21.gif' alt='' style={{
-      width:'50px',
-      height:'50px',
-      'margin': '0 auto',
-      border:'1px solid #900',
-      backgroundImage:'url(image/21.gif)'
-      }}/>
+
+      <h2 className='test2'>Тест отображения картинок из стилей хтмла бэкграундом</h2>
+        {foodILike.map(elem => <Food name={elem.name} picture={elem.image} />)}
+
+      <h2 className='test2'>Тест отображения картинок из стилей хтмла КАРТИНКОЙ img</h2>
+        <img src='url(./image/21.gif)' alt='' style={{
+        width:'50px',
+        height:'50px',
+        'margin': '0 auto',
+        border:'1px solid #900',
+        backgroundImage:'url(../image/21.gif)'
+        }}/>
+
+      <h2 className='test2'>И еще тест картинки из стилей</h2>
+        <div className='test'></div>
 
     </div>
 
