@@ -27,19 +27,19 @@ function Food({name, picture}) {
 
 const foodILike = [
   {
-    'name': 'упячка1',
+    'name': 'упячка 1',
     'image': '../../image/21.gif'
   },
   {
-    'name': 'упячка2',
+    'name': 'упячка 2',
     'image': '/images/41.gif'
   },
   {
-    'name': 'упячка3',
+    'name': 'упячка 3',
     'image': process.env.PUBLIC_URL + '/images/140.gif'
   },
   {
-    'name': 'упячка4',
+    'name': 'упячка 4',
     'image': 'borch/image/110.gif'
   }
 ]
@@ -52,8 +52,11 @@ export const Borch = () => {
       div style=backgroundImage</h2>
         {foodILike.map(elem => <Food name={elem.name} picture={elem.image} />)}
 
-      <h2 className='test2'>Еще какой то тест</h2>
-        {foodILike.map(elem => <Food name={elem.name} picture={`src={require(elem.image)}`} />)}
+      <h2 className='test2'>Тест с process.env.PUBLIC_URL</h2>
+        {foodILike.map(elem => <Food name={elem.name} picture={`{process.env.PUBLIC_URL}${elem.image}`} />)}
+
+      <h2 className='test2'>Тест с require</h2>
+        {foodILike.map(elem => <Food name={elem.name} picture={`{require(${elem.image})}`} />)}
 
       <h2 className='test2'>Тест отображения картинок из файла HTML картинкой <br/>
       img src=url(../../image/21.gif)</h2>
