@@ -18,7 +18,7 @@ function Food({name, picture}) {
       height:'50px',
       'margin': '0 auto',
       border:'1px solid red',
-      backgroundImage:'url(../image/21.gif)'
+      backgroundImage:'url{picture}'
       }}
       ></div>
   </div>
@@ -36,7 +36,7 @@ const foodILike = [
   },
   {
     'name': 'упячка3',
-    'image': '../../image/41.gif'
+    'image': process.env.PUBLIC_URL + '/images/140.gif'
   },
   {
     'name': 'упячка4',

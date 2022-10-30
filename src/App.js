@@ -5,6 +5,7 @@ import { AboutMe } from "./component/AboutMe/AboutMe";
 import { NavBar } from "./component/NavBar/NavBar";
 import ToDo from "./component/ToDo/ToDo";
 import { Borch } from "./component/Borch/Borch";
+import { Else } from "./component/Else/Else";
 import { CounterWithRedux } from "./component/CounterWithRedux/CounterWithRedux";
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
       <Route path='counter' element={<CounterWithRedux />}/>
       <Route path='todo' element={<ToDo />}/>
       <Route path='borch' element={<Borch />}/>
+      <Route path='else' element={<Else />}/>
     </Routes>
     </div>
   );

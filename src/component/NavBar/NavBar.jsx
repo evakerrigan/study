@@ -9,7 +9,8 @@ export const NavBar = () => {
         <li className="item"><NavLink to='/aboutme' activeClassName='active'>Админка</NavLink></li>
         <li className="item"><NavLink to='/counter' activeClassName={styles.active}>Counter with redux</NavLink></li>
         <li className="item"><NavLink to='/todo' activeClassName={styles.active}>To do</NavLink></li>
-        <li className="item"><NavLink to='/borch' activeClassName={styles.active}>Борщ</NavLink></li>
+        <li className="item"><NavLink to='/borch' activeClassName={styles.active}>Borch</NavLink></li>
+        <li className="item"><NavLink to='/else' activeClassName={styles.active}>Else</NavLink></li>
       </ul>
     </nav>
   );
