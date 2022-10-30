@@ -10,3 +10,8 @@
 .test2 {
   color: green;
 }
+.wrapper-3 {
+  width: 50vw;
+  margin: 0 auto;
+  display: flex;
+}
