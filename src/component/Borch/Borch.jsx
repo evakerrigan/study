@@ -43,10 +43,10 @@ export const Borch = () => {
   return (
     <div>
 
-      <h2 className='test2'>Тест отображения картинок из стилей хтмла бэкграундом</h2>
+      <h2 className='test2'>Тест отображения картинок из файла HTML стилями бэкграундом</h2>
         {foodILike.map(elem => <Food name={elem.name} picture={elem.image} />)}
 
-      <h2 className='test2'>Тест отображения картинок из стилей хтмла КАРТИНКОЙ img</h2>
+      <h2 className='test2'>Тест отображения картинок из файла HTML КАРТИНКОЙ img</h2>
         <img src='url(./image/21.gif)' alt='' style={{
         width:'50px',
         height:'50px',
@@ -55,7 +55,7 @@ export const Borch = () => {
         backgroundImage:'url(../image/21.gif)'
         }}/>
 
-      <h2 className='test2'>И еще тест картинки из стилей</h2>
+      <h2 className='test2'>И еще тест картинки из файла стилей CSS</h2>
         <div className='test'></div>
 
     </div>
