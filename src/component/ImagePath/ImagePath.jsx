@@ -7,7 +7,7 @@ import johnsonImg from "../../image/110.gif"
 function Food({name, picture}) {
   return (
   <div className='wrapper-3'>
-    <h3>Я люблю {name}</h3>
+    <h3>{name}</h3>
     <img src={picture} alt='' style={{
       width:'50px',
       height:'50px',
@@ -18,7 +18,9 @@ function Food({name, picture}) {
       height:'50px',
       'margin': '0 auto',
       border:'1px solid red',
-      backgroundImage:'url{picture}'
+      backgroundImage:`url(${picture})`,
+      backgroundPosition: 'center',
+      backgroundSize: 'cover'
       }}
       ></div>
   </div>
@@ -27,20 +29,24 @@ function Food({name, picture}) {
 
 const foodILike = [
   {
-    'name': 'упячка 1',
-    'image': '../../image/21.gif'
+    'name': '1 --- /image/...gif',
+    'image': '/image/21.gif'
   },
   {
-    'name': 'упячка 2',
+    'name': '2 --- /imageS/...gif',
     'image': '/images/41.gif'
   },
   {
-    'name': 'упячка 3',
+    'name': '3 --- PUBLIC_URL + /imageS/...gif',
     'image': process.env.PUBLIC_URL + '/images/140.gif'
   },
   {
-    'name': 'упячка 4',
-    'image': 'borch/image/110.gif'
+    'name': '4 --- PUBLIC_URL + /image/...gif',
+    'image': process.env.PUBLIC_URL + '/image/140.gif'
+  },
+  {
+    'name': '5 --- ../../image/...gif',
+    'image': '../../image/110.gif'
   }
 ]
 
@@ -53,10 +59,18 @@ export const ImagePath = () => {
         {foodILike.map(elem => <Food name={elem.name} picture={elem.image} />)}
 
       <h2 className='test2'>Тест с process.env.PUBLIC_URL</h2>
-        {foodILike.map(elem => <Food name={elem.name} picture={`{process.env.PUBLIC_URL}${elem.image}`} />)}
+        {foodILike.map(elem => <Food name={elem.name} picture={`{${process.env.PUBLIC_URL}${elem.image}`} />)}
 
       <h2 className='test2'>Тест с require</h2>
         {foodILike.map(elem => <Food name={elem.name} picture={`{require(${elem.image})}`} />)}
+
+
+
+
+
+
+
+
 
       <h2 className='test2'>Тест отображения картинок из файла HTML картинкой <br/>
       img src=url(../../image/21.gif)</h2>
@@ -67,11 +81,17 @@ export const ImagePath = () => {
         border:'1px solid blue'
         }}/>
 
+      <h2 className='test2'>Отображение картинки с помощью process.env.PUBLIC_URL</h2>
+        <img src={process.env.PUBLIC_URL + '/images/140.gif'}></img>
+
       <h2 className='test2'>Отображение картинки с помощью require</h2>
         <img src={require("../../image/41.gif")}></img>
 
       <h2 className='test2'>И еще тест картинки из файла стилей CSS</h2>
         <div className='test'></div>
+
+      <h2 className='test2'>И еще тест картинки из файла HTML встроенными стилями style=</h2>
+        <div className='test-html' style={{backgroundImage:'url(/image/119.gif)'}} ></div>
 
       <h2 className='test2'>Тест картинки если ее импортировать</h2>
         <img src={johnsonImg} />
