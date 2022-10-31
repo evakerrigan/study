@@ -1,6 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import './Borch.css'
+import './ImagePath.css'
 import johnsonImg from "../../image/110.gif"
 
 
@@ -44,7 +44,7 @@ const foodILike = [
   }
 ]
 
-export const Borch = () => {
+export const ImagePath = () => {
   return (
     <div>
 

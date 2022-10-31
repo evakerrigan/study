@@ -4,7 +4,7 @@ import { Navigate, Route, Routes } from "react-router-dom";
 import { AboutMe } from "./component/AboutMe/AboutMe";
 import { NavBar } from "./component/NavBar/NavBar";
 import ToDo from "./component/ToDo/ToDo";
-import { Borch } from "./component/Borch/Borch";
+import { ImagePath } from "./component/ImagePath/ImagePath";
 import { Else } from "./component/Else/Else";
 import { CounterWithRedux } from "./component/CounterWithRedux/CounterWithRedux";
 
@@ -18,7 +18,7 @@ function App() {
       <Route path='aboutme' element={<AboutMe />}/>
       <Route path='counter' element={<CounterWithRedux />}/>
       <Route path='todo' element={<ToDo />}/>
-      <Route path='borch' element={<Borch />}/>
+      <Route path='imagepath' element={<ImagePath />}/>
       <Route path='else' element={<Else />}/>
     </Routes>
     </div>
