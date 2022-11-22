@@ -11,6 +11,7 @@ export const NavBar = () => {
         <li className="item"><NavLink to='/todo'>To do</NavLink></li>
         <li className="item"><NavLink to='/imagepath'>Image Path</NavLink></li>
         <li className="item"><NavLink to='/else'>Else</NavLink></li>
+        <li className="item"><NavLink to='/repeat-todo'>RepeatTodo</NavLink></li>
       </ul>
     </nav>
   );

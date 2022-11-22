@@ -7,6 +7,7 @@ import ToDo from "./component/ToDo/ToDo";
 import { ImagePath } from "./component/ImagePath/ImagePath";
 import { Else } from "./component/Else/Else";
 import { CounterWithRedux } from "./component/CounterWithRedux/CounterWithRedux";
+import { RepeatTodo } from "./component/RepeatTodo/RepeatTodo";
 
 function App() {
 
@@ -14,13 +15,14 @@ function App() {
   return (
     <div className="App">
       <NavBar />
-    <Routes>
-      <Route path='aboutme' element={<AboutMe />}/>
-      <Route path='counter' element={<CounterWithRedux />}/>
-      <Route path='todo' element={<ToDo />}/>
-      <Route path='imagepath' element={<ImagePath />}/>
-      <Route path='else' element={<Else />}/>
-    </Routes>
+      <Routes>
+        <Route path='aboutme' element={<AboutMe />}/>
+        <Route path='counter' element={<CounterWithRedux />}/>
+        <Route path='todo' element={<ToDo />}/>
+        <Route path='imagepath' element={<ImagePath />}/>
+        <Route path='else' element={<Else />}/>
+        <Route path='repeat-todo' element={<RepeatTodo />}/>
+      </Routes>
     </div>
   );
 }

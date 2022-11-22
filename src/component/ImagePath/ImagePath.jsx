@@ -62,6 +62,7 @@ export const ImagePath = () => {
 
       <h2 className='test2'>Тест с require</h2>
         {foodILike.map(elem => <Food key={elem.image} name={elem.name} picture={`{require(${elem.image})}`} />)}
+        {/* {foodILike.map(elem => <Food key={elem.image} name={elem.name} picture={require(elem.image)} />)} */}
 
 
 

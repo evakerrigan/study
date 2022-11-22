@@ -1,0 +1,29 @@
+.repeat-todo-wrapper {
+  display: flex;
+  width: 300px;
+  margin: 0 auto;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.repeat-todo-title {
+  color: green;
+  font-size: 20px;
+}
+.repeat-todo-list {
+  text-align: left;
+}
+.repeat-todo-item {
+  width: 300px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+}
+.repeat-todo-remove {
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  vertical-align: center;
+  border: 1px solid #aaa;
+  border-radius: 3px;
+  cursor:default
+}
